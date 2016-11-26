@@ -1,0 +1,18 @@
+div.pair {
+    float: right;
+    margin: 6px;
+}
+label {
+    display: block;
+    color: gray;
+    text-align: right;
+}
+.copper-img {
+    background-image: url('img/copper.png');
+}
+.silver-img {
+    background-image: url('img/silver.png');
+}
+.gold-img {
+    background-image: url('img/gold.png');
+}
