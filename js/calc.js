@@ -57,14 +57,14 @@ function update() {
 	var revenue = sellPrice * quantity;
     var cost = buyPrice * quantity;
     var profit = quantity * (sellPrice - buyPrice) - listingFee - sellingFee;
-    var profitPercent = Math.round(profit / cost * 100);
+    var profitPercent = profit / cost * 100;
 
 	$('#revenue').html(format(revenue));
     $('#cost').html(format(cost));
     $('#listingFee').html(format(listingFee));
     $('#saleFee').html(format(sellingFee));
     $('#profit').html(colorOutput(profit));
-	$('#profitPercent').html('(' + profitPercent + '%)'); 
+	$('#profitPercent').html('(' + profitPercent.toFixed(2) + '%)'); 
 }
 
 function calcListingFee(price) {
