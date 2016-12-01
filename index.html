@@ -49,12 +49,6 @@
                 <img src="img/copper.png" />
                 <label for="sellCopper">copper</label>
             </div>
-
-<!--             <div>
-                <input id="sellGold" onkeyup="update()" type="text" maxlength="5"><img src="img/gold.png" />
-                <input id="sellSilver" onkeyup="update()" type="text" maxlength="2"><img src="img/silver.png" />
-                <input id="sellCopper" onkeyup="update()" type="text" maxlength="2"><img src="img/copper.png" />
-            </div> -->
             </fieldset>
             <fieldset>
             <legend>Quantity</legend>
@@ -63,8 +57,11 @@
             </fieldset>
         </div>
         <div class="column result-column">
-            <legend>Result</legend>
             <table>
+			  <tr>
+				<td style="padding-right:4px"><b>Revenue</b></td>
+                    <td id="revenue" class="align-right"></td>
+                </tr>
                 <tr>
                     <td style="padding-right:4px"><b>- Cost</b></td>
                     <td id="cost" class="align-right"></td>
@@ -77,10 +74,17 @@
                     <td style="padding-right:4px"><b>- Sale Fee</b></td>
                     <td id="saleFee" class="align-right"></td>
                 </tr>
+				<tr>
+				  <td colspan="2"><hr/></td>
+				</tr>
                 <tr>
                     <td style="padding-right:4px"><b>= Profit</b></td>
                     <td id="profit" class="align-right"></td>
                 </tr>
+				<tr>
+					<td/>
+					<td id="profitPercent" class="align-right"></td>
+				</tr>
             </table>
         </div>
     </div>
