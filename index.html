@@ -1,55 +1,88 @@
 ﻿<html>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="js/calc.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <script src="js/calc.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-    <table>
-        <tr>
-            <td>
-                <h4>Buy Price</h4>
-                <div>
-                    <input id="buyGold" onkeyup="update()" style="width:3em;margin-right:4px" type="text" maxlength="5"><img src="img/gold.png" />
-                    <input id="buySilver" onkeyup="update()" style="width:2em;margin-right:4px" type="text" maxlength="2"><img src="img/silver.png" />
-                    <input id="buyCopper" onkeyup="update()" style="width:2em;margin-right:4px" type="text" maxlength="2"><img src="img/copper.png" />
+    <div class="content">
+        <div class="column input-column">
+            <fieldset>
+            <legend>Buy Price</legend>
+                <div class="field-wrap">
+                    <input id="buyGold" onkeyup="update()" type="text" maxlength="5">
+                    <img src="img/gold.png" alt=""  />
+                    <label for="buyGold">gold</label>
                 </div>
-                <br>
-                <h4>Sell Price</h4>
-                <div>
-                    <input id="sellGold" onkeyup="update()" style="width:3em;margin-right:4px;" type="text" maxlength="5"><img src="img/gold.png" />
-                    <input id="sellSilver" onkeyup="update()" style="width:2em;margin-right:4px;" type="text" maxlength="2"><img src="img/silver.png" />
-                    <input id="sellCopper" onkeyup="update()" style="width:2em;margin-right:4px;" type="text" maxlength="2"><img src="img/copper.png" />
-                </div>
-                <br>
-                <h4>Quantity</h4>
-                <input id="quantity" onkeyup="update()" style="width:3em;margin-right:4px;" type="text" value="1">
-                <button class="btn" onclick="reset()">Reset</button>
-            </td>
 
-            <td style="vertical-align:top;padding-left:50px;">
-                <h4>Result</h4>
-                <table>
-                    <tr>
-                        <td style="padding-right:4px"><b>- Cost</b></td>
-                        <td id="cost" class="align-right"></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-right:4px"><b>- Listing Fee</b></td>
-                        <td id="listingFee" class="align-right"></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-right:4px"><b>- Sale Fee</b></td>
-                        <td id="saleFee" class="align-right"></td>
-                    </tr>
-                    <tr>
-                        <td style="padding-right:4px"><b>= Profit</b></td>
-                        <td id="profit" class="align-right"></td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                <div class="field-wrap">
+                    <input id="buySilver" onkeyup="update()" type="text" maxlength="5">
+                    <img src="img/silver.png" alt="" />
+                    <label for="buySilver">silver</label>
+                </div>
+
+                <div class="field-wrap">
+                    <input id="buyCopper" onkeyup="update()" type="text" maxlength="5">
+                    <img src="img/copper.png" />
+                    <label for="buyCopper">copper</label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+            <legend>Sell Price</legend>
+
+            <div class="field-wrap">
+                <input id="sellGold" onkeyup="update()" type="text" maxlength="5">
+                <img src="img/gold.png" alt=""  />
+                <label for="sellGold">gold</label>
+            </div>
+
+            <div class="field-wrap">
+                <input id="sellSilver" onkeyup="update()" type="text" maxlength="5">
+                <img src="img/silver.png" alt="" />
+                <label for="sellSilver">silver</label>
+            </div>
+
+            <div class="field-wrap">
+                <input id="sellCopper" onkeyup="update()" type="text" maxlength="5">
+                <img src="img/copper.png" />
+                <label for="sellCopper">copper</label>
+            </div>
+
+<!--             <div>
+                <input id="sellGold" onkeyup="update()" type="text" maxlength="5"><img src="img/gold.png" />
+                <input id="sellSilver" onkeyup="update()" type="text" maxlength="2"><img src="img/silver.png" />
+                <input id="sellCopper" onkeyup="update()" type="text" maxlength="2"><img src="img/copper.png" />
+            </div> -->
+            </fieldset>
+            <fieldset>
+            <legend>Quantity</legend>
+            <input id="quantity" onkeyup="update()" type="text" value="1">
+            <button class="btn" onclick="reset()">Reset</button>
+            </fieldset>
+        </div>
+        <div class="column result-column">
+            <legend>Result</legend>
+            <table>
+                <tr>
+                    <td style="padding-right:4px"><b>- Cost</b></td>
+                    <td id="cost" class="align-right"></td>
+                </tr>
+                <tr>
+                    <td style="padding-right:4px"><b>- Listing Fee</b></td>
+                    <td id="listingFee" class="align-right"></td>
+                </tr>
+                <tr>
+                    <td style="padding-right:4px"><b>- Sale Fee</b></td>
+                    <td id="saleFee" class="align-right"></td>
+                </tr>
+                <tr>
+                    <td style="padding-right:4px"><b>= Profit</b></td>
+                    <td id="profit" class="align-right"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>

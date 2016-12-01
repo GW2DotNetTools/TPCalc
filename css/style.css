@@ -1,18 +1,50 @@
-div.pair {
-    float: right;
-    margin: 6px;
+* {
+	font-family: sans-serif;
+	box-sizing: border-box;
 }
+
+.content {
+	display: table;
+}
+
+.column {
+	display: table-cell;
+	padding: 15px;
+}
+
+input,
+label {
+	width: calc(5em + 20px);
+}
+
+input, .btn {
+	font-size: 1em;
+	line-height: 1.4;
+	padding: .5em 1em;
+}
+
+input + img {
+	position: relative;
+	left: -25px;
+}
+
 label {
     display: block;
     color: gray;
     text-align: right;
+    font-weight: normal;
 }
-.copper-img {
-    background-image: url('img/copper.png');
+
+fieldset {
+	display: block;
 }
-.silver-img {
-    background-image: url('img/silver.png');
+
+legend {
+	font-size: 1em;
+	border-bottom: 0;
+	margin-bottom: .5em;
 }
-.gold-img {
-    background-image: url('img/gold.png');
+
+.field-wrap {
+	display: inline-block;
 }
