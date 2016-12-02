@@ -1,31 +1,38 @@
 * {
-	font-family: sans-serif;
-	box-sizing: border-box;
+    font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 .content {
-	display: table;
+    display: table;
 }
 
 .column {
-	display: table-cell;
-	padding: 15px;
+    display: table-cell;
+    padding: 15px;
+}
+
+#header{
+    height:35px;
+    background-color:red;
+    width:100%;
+    padding:0px 0px 0px 15px;
 }
 
 input,
 label {
-	width: calc(5em + 20px);
+    width: calc(5em + 20px);
 }
 
 input, .btn {
-	font-size: 1em;
-	line-height: 1.4;
-	padding: .5em 1em;
+    font-size: 1em;
+    line-height: 1.4;
+    padding: .5em 1em;
 }
 
 input + img {
-	position: relative;
-	left: -25px;
+    position: relative;
+    left: -25px;
 }
 
 label {
@@ -36,15 +43,15 @@ label {
 }
 
 fieldset {
-	display: block;
+    display: block;
 }
 
 legend {
-	font-size: 1em;
-	border-bottom: 0;
-	margin-bottom: .5em;
+    font-size: 1em;
+    border-bottom: 0;
+    margin-bottom: .5em;
 }
 
 .field-wrap {
-	display: inline-block;
+    display: inline-block;
 }
