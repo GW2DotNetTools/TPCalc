@@ -42,28 +42,28 @@ function colorOutput(amount) {
 
 function update() {
 	var buyGold = parseInt($('#buyGold').val()) || 0;
-    var buySilver = parseInt($('#buySilver').val()) || 0;
-    var buyCopper = parseInt($('#buyCopper').val()) || 0;
-    var sellGold = parseInt($('#sellGold').val()) || 0;
-    var sellSilver = parseInt($('#sellSilver').val()) || 0;
-    var sellCopper = parseInt($('#sellCopper').val()) || 0;
-    var quantity = parseInt($('#quantity').val()) || 1;
+	var buySilver = parseInt($('#buySilver').val()) || 0;
+	var buyCopper = parseInt($('#buyCopper').val()) || 0;
+	var sellGold = parseInt($('#sellGold').val()) || 0;
+	var sellSilver = parseInt($('#sellSilver').val()) || 0;
+	var sellCopper = parseInt($('#sellCopper').val()) || 0;
+	var quantity = parseInt($('#quantity').val()) || 1;
 
-    var buyPrice = buyGold * 10000 + buySilver * 100 + buyCopper;
-    var sellPrice = sellGold * 10000 + sellSilver * 100 + sellCopper;
-    var listingFee = calcListingFee(quantity * sellPrice);
-    var sellingFee = calcSellingFee(quantity * sellPrice);
+	var buyPrice = buyGold * 10000 + buySilver * 100 + buyCopper;
+	var sellPrice = sellGold * 10000 + sellSilver * 100 + sellCopper;
+	var listingFee = calcListingFee(quantity * sellPrice);
+	var sellingFee = calcSellingFee(quantity * sellPrice);
 
 	var revenue = sellPrice * quantity;
-    var cost = buyPrice * quantity;
-    var profit = quantity * (sellPrice - buyPrice) - listingFee - sellingFee;
-    var profitPercent = profit / cost * 100;
+	var cost = buyPrice * quantity;
+	var profit = quantity * (sellPrice - buyPrice) - listingFee - sellingFee;
+	var profitPercent = profit / cost * 100;
 
 	$('#revenue').html(format(revenue));
-    $('#cost').html(format(cost));
-    $('#listingFee').html(format(listingFee));
-    $('#saleFee').html(format(sellingFee));
-    $('#profit').html(colorOutput(profit));
+	$('#cost').html(format(cost));
+	$('#listingFee').html(format(listingFee));
+	$('#saleFee').html(format(sellingFee));
+	$('#profit').html(colorOutput(profit));
 	$('#profitPercent').html('(' + profitPercent.toFixed(2) + '%)'); 
 }
 
@@ -76,9 +76,11 @@ function calcSellingFee(price) {
 }
 
 function reset() {
-    $('#quantity').val('1');
-    $('#cost').html('');
-    $('#listingFee').html('');
-    $('#saleFee').html('');
-    $('#profit').html('');
+	$('#quantity').val('1');
+	$('#cost').html('');
+	$('#listingFee').html('');
+	$('#saleFee').html('');
+	$('#profit').html('');
+	$('#revenue').html('');
+	$('#profitPercent').html('');
 }

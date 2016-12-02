@@ -1,94 +1,104 @@
 ﻿<html>
 <head>
 	<title>TPCalc</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/calc.js"></script>
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/calc.js"></script>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="icon" type="image/png" href="img/gold.png">
+	 <style>
+		#header{
+			height:40;
+			background-color:red;
+			width:100%;
+		}
+	</style>
 </head>
 <body>
-    <div class="content">
-        <div class="column input-column">
-            <fieldset>
-            <legend>Buy Price</legend>
-                <div class="field-wrap">
-                    <input id="buyGold" onkeyup="update()" type="text" maxlength="5">
-                    <img src="img/gold.png" alt=""  />
-                    <label for="buyGold">gold</label>
-                </div>
+	<div id="header">
+		<td style="padding-right:4px"><a href="https://dreanor.github.io/TPCalc/"><font color="white" size="5"><b>dreanor.github.io/TPCalc</b></font></a></td>
+	</div>
+	<div class="content">
+		<div class="column input-column">
+			<fieldset>
+			<legend>Buy Price</legend>
+				<div class="field-wrap">
+					<input id="buyGold" onkeyup="update()" type="text" maxlength="5">
+					<img src="img/gold.png" alt=""  />
+					<label for="buyGold">gold</label>
+				</div>
 
-                <div class="field-wrap">
-                    <input id="buySilver" onkeyup="update()" type="text" maxlength="5">
-                    <img src="img/silver.png" alt="" />
-                    <label for="buySilver">silver</label>
-                </div>
+				<div class="field-wrap">
+					<input id="buySilver" onkeyup="update()" type="text" maxlength="5">
+					<img src="img/silver.png" alt="" />
+					<label for="buySilver">silver</label>
+				</div>
 
-                <div class="field-wrap">
-                    <input id="buyCopper" onkeyup="update()" type="text" maxlength="5">
-                    <img src="img/copper.png" />
-                    <label for="buyCopper">copper</label>
-                </div>
-            </fieldset>
+				<div class="field-wrap">
+					<input id="buyCopper" onkeyup="update()" type="text" maxlength="5">
+					<img src="img/copper.png" />
+					<label for="buyCopper">copper</label>
+				</div>
+			</fieldset>
 
-            <fieldset>
-            <legend>Sell Price</legend>
+			<fieldset>
+			<legend>Sell Price</legend>
 
-            <div class="field-wrap">
-                <input id="sellGold" onkeyup="update()" type="text" maxlength="5">
-                <img src="img/gold.png" alt=""  />
-                <label for="sellGold">gold</label>
-            </div>
+			<div class="field-wrap">
+				<input id="sellGold" onkeyup="update()" type="text" maxlength="5">
+				<img src="img/gold.png" alt=""  />
+				<label for="sellGold">gold</label>
+			</div>
 
-            <div class="field-wrap">
-                <input id="sellSilver" onkeyup="update()" type="text" maxlength="5">
-                <img src="img/silver.png" alt="" />
-                <label for="sellSilver">silver</label>
-            </div>
+			<div class="field-wrap">
+				<input id="sellSilver" onkeyup="update()" type="text" maxlength="5">
+				<img src="img/silver.png" alt="" />
+				<label for="sellSilver">silver</label>
+			</div>
 
-            <div class="field-wrap">
-                <input id="sellCopper" onkeyup="update()" type="text" maxlength="5">
-                <img src="img/copper.png" />
-                <label for="sellCopper">copper</label>
-            </div>
-            </fieldset>
-            <fieldset>
-            <legend>Quantity</legend>
-            <input id="quantity" onkeyup="update()" type="text" value="1">
-            <button class="btn" onclick="reset()">Reset</button>
-            </fieldset>
-        </div>
-        <div class="column result-column">
-            <table>
+			<div class="field-wrap">
+				<input id="sellCopper" onkeyup="update()" type="text" maxlength="5">
+				<img src="img/copper.png" />
+				<label for="sellCopper">copper</label>
+			</div>
+			</fieldset>
+			<fieldset>
+			<legend>Quantity</legend>
+			<input id="quantity" onkeyup="update()" type="text" value="1">
+			<button class="btn" onclick="reset()">Reset</button>
+			</fieldset>
+		</div>
+		<div class="column result-column">
+			<table>
 			  <tr>
 				<td style="padding-right:4px"><b>Revenue</b></td>
-                    <td id="revenue" class="align-right"></td>
-                </tr>
-                <tr>
-                    <td style="padding-right:4px"><b>- Cost</b></td>
-                    <td id="cost" class="align-right"></td>
-                </tr>
-                <tr>
-                    <td style="padding-right:4px"><b>- Listing Fee</b></td>
-                    <td id="listingFee" class="align-right"></td>
-                </tr>
-                <tr>
-                    <td style="padding-right:4px"><b>- Sale Fee</b></td>
-                    <td id="saleFee" class="align-right"></td>
-                </tr>
+					<td id="revenue" class="align-right"></td>
+				</tr>
+				<tr>
+					<td style="padding-right:4px"><b>- Cost</b></td>
+					<td id="cost" class="align-right"></td>
+				</tr>
+				<tr>
+					<td style="padding-right:4px"><b>- Listing Fee</b></td>
+					<td id="listingFee" class="align-right"></td>
+				</tr>
+				<tr>
+					<td style="padding-right:4px"><b>- Sale Fee</b></td>
+					<td id="saleFee" class="align-right"></td>
+				</tr>
 				<tr>
 				  <td colspan="2"><hr/></td>
 				</tr>
-                <tr>
-                    <td style="padding-right:4px"><b>= Profit</b></td>
-                    <td id="profit" class="align-right"></td>
-                </tr>
+				<tr>
+					<td style="padding-right:4px"><b>= Profit</b></td>
+					<td id="profit" class="align-right"></td>
+				</tr>
 				<tr>
 					<td/>
 					<td id="profitPercent" class="align-right"></td>
 				</tr>
-            </table>
-        </div>
-    </div>
+			</table>
+		</div>
+	</div>
 </body>
 </html>
