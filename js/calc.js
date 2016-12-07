@@ -83,4 +83,10 @@ function reset() {
     $('#profit').html('');
     $('#revenue').html('');
     $('#profitPercent').html('');
+    $('#buyGold').val('');
+	$('#buySilver').val('');
+	$('#buyCopper').val('');
+	$('#sellGold').val('');
+	$('#sellSilver').val('');
+	$('#sellCopper').val('');
 }
