@@ -9,17 +9,11 @@ function format(amount) {
     var silver = Math.floor(amount / 100) % 100;
     var copper = Math.floor(amount % 100);
     var output = [];
+	
+    output.push(gold + ' <img src="img/gold.png" />');
+    output.push(('0'+silver).slice(-2) + ' <img src="img/silver.png" />');
+    output.push(('0'+copper).slice(-2) + ' <img src="img/copper.png" />');
 
-    if (gold) {
-        output.push(gold + ' <img src="img/gold.png" />');
-    }
-    if (silver) {
-        output.push(silver + ' <img src="img/silver.png" />');
-    }
-    if (copper) {
-        output.push(copper + ' <img src="img/copper.png" />');
-    }
-    
     return output.join(' ');
 }
 
